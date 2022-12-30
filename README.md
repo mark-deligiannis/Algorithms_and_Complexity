@@ -1,2 +1,2 @@
 # Algorithms_and_Complexity
-7th semester course: Algorithms and Complexity
+Solutions to programming tasks in course "Algorithms and Complexity"
