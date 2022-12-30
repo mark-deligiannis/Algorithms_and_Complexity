@@ -1,4 +1,4 @@
-1st task group\testdata\cereal\
-1st task group\1st.exe
-20
+2nd task group\testdata\salaries\
+2nd task group\1st.exe
+25
 1
