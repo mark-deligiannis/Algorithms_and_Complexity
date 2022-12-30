@@ -32,14 +32,8 @@ int main() {
     results_left.push_back({0, -1});
     results_right.push_back({0, numeric_limits<int>::max()});
 
-    // Initalize
-    cin >> current;
-    numbers.push_back(current);
-    results_left.push_back({1, current});
-    transition_stack.push_back({1,-1});
-
     // Scan array from left to right and construct transition_stack
-    for (int i=1; i<N-1; ++i) {
+    for (int i=0; i<N-1; ++i) {
         // Get i-th number
         cin >> current;
         numbers.push_back(current);
@@ -93,10 +87,6 @@ int main() {
 
         // update max_l
         max_l = max(max_l,help_l+l);
-
-        // // Update results_right
-        // if (l == results_right.size()) results_right.push_back({l, current-K});
-        // else results_right[l] = {l, current-K};
     }
 
     cout << max_l << endl;
