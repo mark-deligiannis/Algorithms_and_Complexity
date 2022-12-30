@@ -1,0 +1,4 @@
+1st task group\testdata\cereal\
+1st task group\1st.exe
+20
+1
