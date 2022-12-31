@@ -4,6 +4,7 @@ Solutions to programming tasks in course "Algorithms and Complexity"
 ## run_tests.py
 Can test and create a performance report for any program by redirecting files to stdin and checking the output. Configurable from Config.txt.
 ## Config.txt
+Located in the same folder as run_tests.py.
 Must **only contain 4** lines (no \n in the end) that correspond to:
 
 * Path of the folder containing input & output files
