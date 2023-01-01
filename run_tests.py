@@ -35,7 +35,7 @@ for i in range(1,n_tests+1):
             else:
                 print(f"Test case {i}: Fail, Wrong answer {execution_time:.4f} seconds")
                 #print(f"{(result)}a{(expected_res)}a")
-        except TimeoutError:
+        except subprocess.TimeoutExpired:
             print(f"Test case {i}: Fail, Time limit exceeded")
         except:
             print(f"Test case {i}: Fail, Unknown Error (It's your program's fault, not mine. I think)")
