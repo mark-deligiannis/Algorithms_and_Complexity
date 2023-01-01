@@ -1,4 +1,4 @@
-2nd task group\testdata\salaries\
-2nd task group\1st.exe
-25
+2nd task group\testdata\relay\
+2nd task group\2nd.exe
+22
 1

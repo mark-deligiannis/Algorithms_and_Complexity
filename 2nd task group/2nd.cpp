@@ -17,12 +17,8 @@ uint64_t solve_memo(int node) {
     if (!node) return 0;
     if (results[node]) return results[node];
     uint64_t minimum = numeric_limits<uint64_t>::max();
-    // cout << "NODE " << node << " is being calculated" << endl;;
-    for (int x=parents[node]; x!=-1; x=parents[x]) {
-        // cout << x << endl;
+    for (int x=parents[node]; x!=-1; x=parents[x])
         minimum = min( minimum, solve_memo(x) + S[node] * ( Dist_to_root[node] - Dist_to_root[x] ) );
-        // cout << "AAAA: " << results[0] << " " << results[1] << " " << results[2] << " " << results[3] << " " << results[4]  << endl;
-    }
     
     nodes_done++;
     minimum += P[node];
@@ -32,6 +28,7 @@ uint64_t solve_memo(int node) {
 int main() {
     cin >> N;
 
+    // Initialize vectors
     parents.resize(N);
     Dist_to_parent.resize(N);
     Dist_to_root.resize(N);
@@ -51,6 +48,7 @@ int main() {
     for (int i=1; i<N; ++i)
         cin >> P[i] >> S[i];
 
+    // Initial conditions (about Capital)
     parents[0] = -1;
     Dist_to_parent[0] = Dist_to_root[0] = results[0] = 0;
 
@@ -78,15 +76,17 @@ int main() {
             const int &temp = adjacent.first;
             if (!visited[temp]) {
                 visited[temp] = true;
+                // Calculate and store useful information about that city
                 parents[temp] = current;
                 Dist_to_parent[temp] = adjacent.second;
                 Dist_to_root[temp] = Dist_to_root[current]+adjacent.second;
+
                 queue.push_back(temp);
             }
         }
     }
 
-    // Find answer for everyone using memoisation
+    // Find answer for everyone using memoization
     nodes_done=1;
     for (int i=1; nodes_done<N; ++i) solve_memo(i);
     
