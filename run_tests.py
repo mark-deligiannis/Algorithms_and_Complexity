@@ -10,7 +10,6 @@ from os import X_OK
 def is_exe(fpath):
     return isfile(fpath) and access(fpath, X_OK)
 
-
 # Handles fatal errors. Displays custom message to user until enter is pressed and then terminates
 def fatal_error_handler(name):
     print(name)
