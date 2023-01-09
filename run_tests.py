@@ -52,7 +52,6 @@ f_output_name = path_pref + f_output_name
 def run_inst(i, input):
     return subprocess.run(exe_path, timeout=timeout, capture_output=True,input=input.encode('UTF-8')).stdout.decode('UTF-8')
 
-
 # MAIN CHECK LOOP
 for i in range(1,n_tests+1):
     # Construct full names and check if they exist
