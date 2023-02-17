@@ -77,8 +77,12 @@ for i in range(1,n_tests+1):
                 print(f"Test case {i}: Fail, Wrong answer {execution_time:.4f} seconds")
         except subprocess.TimeoutExpired:
             print(f"Test case {i}: Fail, Time limit exceeded")
+        except KeyboardInterrupt:
+            input("Press enter to terminate...")
+            sys.exit(0)
         except:
             print(f"Test case {i}: Fail, Unknown Error (It's probably the exe's fault, e.g. segmentation fault)")
+        
 
 # Wait for readability
 input("\nPress enter to exit:")
