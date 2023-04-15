@@ -1,5 +1,5 @@
 # Algorithms_and_Complexity
-Solutions to programming tasks in course "Algorithms and Complexity".
+Solutions to programming tasks in ECE NTUA course "Algorithms and Complexity".
 
 ## run_tests.py
 Can test and create a performance report for any program by redirecting files to stdin and checking the output. Configurable from Config.txt.
